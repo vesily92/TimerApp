@@ -15,11 +15,18 @@ struct SignInButtonView: View {
     
     var body: some View {
         Button(action: action) {
-            HStack {
-                Image(systemName: "checkmark.square")
-                Text("Sign In")
-            }
+            Text("sign in")
+                .bold()
+                .font(.title)
+                .foregroundColor(.white)
         }
+        .frame(width: 180, height: 60)
+        .background(
+            login.count >= 3
+            ? .blue
+            : Color(red: 0.9, green: 0.9, blue: 0.9)
+        )
+        .cornerRadius(20)
         .disabled(login.count >= 3 ? false : true)
     }
 }

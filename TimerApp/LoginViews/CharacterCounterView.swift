@@ -13,7 +13,10 @@ struct CharacterCounterView: View {
     
     var body: some View {
         Text("\(login.count)")
+            .bold()
             .foregroundColor(login.count < 3 ? .red : .green)
+            .frame(width: 30)
+            .multilineTextAlignment(.trailing)
     }
 }
 
