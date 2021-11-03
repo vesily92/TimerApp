@@ -14,7 +14,7 @@ class Counter: ObservableObject {
     let objectWillChange = PassthroughSubject<Counter, Never>()
     var counter = 3
     var timer: Timer?
-    var buttonText = "Start"
+    var buttonText = "start ⏱"
     var colorChange = false
     
     func startTimer() {
@@ -30,12 +30,13 @@ class Counter: ObservableObject {
         buttonTapped()
     }
     
+    
     @objc private func updateCounter() {
         if counter > 0 {
             counter -= 1
         } else {
             stopTimer()
-            buttonText = "Reset"
+            buttonText = "reset 🔄"
             colorChange = false
         }
         objectWillChange.send(self)
@@ -47,12 +48,12 @@ class Counter: ObservableObject {
     }
     
     private func buttonTapped() {
-        if buttonText == "Reset" {
+        if buttonText == "reset 🔄" {
             counter = 3
-            buttonText = "Start"
+            buttonText = "start ⏱"
             colorChange = false
         } else {
-            buttonText = "Wait..."
+            buttonText = "wait..."
             colorChange = true
         }
         objectWillChange.send(self)

@@ -18,6 +18,8 @@
 		7B9AEDEA2732C01C009111DF /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDE92732C01C009111DF /* InitialView.swift */; };
 		7B9AEDEC2732CD07009111DF /* CharacterCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDEB2732CD06009111DF /* CharacterCounterView.swift */; };
 		7B9AEDEE2732D205009111DF /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDED2732D205009111DF /* SignInButtonView.swift */; };
+		7B9AEDF32732D9D5009111DF /* LogOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDF22732D9D5009111DF /* LogOutButtonView.swift */; };
+		7B9AEDF527331872009111DF /* TipTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDF427331872009111DF /* TipTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		7B9AEDE92732C01C009111DF /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		7B9AEDEB2732CD06009111DF /* CharacterCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCounterView.swift; sourceTree = "<group>"; };
 		7B9AEDED2732D205009111DF /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
+		7B9AEDF22732D9D5009111DF /* LogOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonView.swift; sourceTree = "<group>"; };
+		7B9AEDF427331872009111DF /* TipTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				7B9AEDE52732BB29009111DF /* LoginView.swift */,
 				7B9AEDEB2732CD06009111DF /* CharacterCounterView.swift */,
 				7B9AEDED2732D205009111DF /* SignInButtonView.swift */,
+				7B9AEDF427331872009111DF /* TipTextView.swift */,
 			);
 			path = LoginViews;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			children = (
 				7B9AEDD527318626009111DF /* ContentView.swift */,
 				7B9AEDE32732B8E9009111DF /* StartButtonView.swift */,
+				7B9AEDF22732D9D5009111DF /* LogOutButtonView.swift */,
 			);
 			path = TimerViews;
 			sourceTree = "<group>";
@@ -184,6 +190,8 @@
 			files = (
 				7B9AEDE82732BCF4009111DF /* UserManager.swift in Sources */,
 				7B9AEDD627318626009111DF /* ContentView.swift in Sources */,
+				7B9AEDF527331872009111DF /* TipTextView.swift in Sources */,
+				7B9AEDF32732D9D5009111DF /* LogOutButtonView.swift in Sources */,
 				7B9AEDE42732B8E9009111DF /* StartButtonView.swift in Sources */,
 				7B9AEDD427318626009111DF /* TimerAppApp.swift in Sources */,
 				7B9AEDE62732BB29009111DF /* LoginView.swift in Sources */,
