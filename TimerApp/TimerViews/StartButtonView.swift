@@ -19,12 +19,15 @@ struct StartButtonView: View {
                 .bold()
                 .font(.title)
                 .foregroundColor(.white)
+                .offset(x: 5)
+                
         }
-        .frame(width: 200, height: 60)
-        .background(timer.colorChange ? .gray : .red)
+        .frame(width: 180, height: 60)
+        .background(
+            timer.colorChange
+            ? Color(red: 0.9, green: 0.9, blue: 0.9)
+            : .orange)
         .cornerRadius(20)
-        .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 5))
-        
     }
 }
 

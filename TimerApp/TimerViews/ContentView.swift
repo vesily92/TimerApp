@@ -13,16 +13,29 @@ struct ContentView: View {
     @EnvironmentObject private var user: UserManager
     
     var body: some View {
-        VStack {
-            Text("Hi, \(user.name)!")
+        VStack(spacing: 160) {
+            Text("Wellcome, \(user.name)!\n✌️")
+                .bold()
+                .multilineTextAlignment(.center)
                 .font(.largeTitle)
+                .foregroundColor(.black)
                 .padding()
+            
             Text("\(timer.counter)")
-                .font(.largeTitle)
+                .font(.system(size: 64))
+                .bold()
                 .padding()
-            Spacer()
-            StartButtonView(action: { timer.startTimer() }, timer: timer)
-            Spacer()
+            
+            VStack(spacing: 16) {
+                StartButtonView(action: { timer.startTimer() }, timer: timer)
+                    .padding(.bottom, 16)
+                LogOutButtonView(action: logOut)
+            }
+        }
+    }
+    private func logOut() {
+        if user.isLoggedIn == true {
+            user.isLoggedIn.toggle()
         }
     }
 }
@@ -30,24 +43,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct ButtonStyleView: View {
-    
-    let action: () -> Void
-    
-    @ObservedObject var timer: Counter
-    
-    var body: some View {
-        Button(action: action) {
-            Text(timer.buttonText)
-                .bold()
-                .font(.title)
-                .foregroundColor(.white)
-        }
-        .frame(width: 200, height: 60)
-        .background(timer.colorChange ? .gray : .red)
-        .cornerRadius(20)
     }
 }
