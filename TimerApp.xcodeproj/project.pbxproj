@@ -101,9 +101,9 @@
 			children = (
 				7B9AEE0827342EB0009111DF /* LoginView.swift */,
 				7B9AEE0427341D04009111DF /* LoginTextFieldView.swift */,
-				7B9AEE0227341BD0009111DF /* LoginButtonView.swift */,
-				7B9AEE0627341EF3009111DF /* TipTextView.swift */,
 				7B64938527358336000A71C2 /* CharacterCounterView.swift */,
+				7B9AEE0627341EF3009111DF /* TipTextView.swift */,
+				7B9AEE0227341BD0009111DF /* LoginButtonView.swift */,
 			);
 			path = LoginViews;
 			sourceTree = "<group>";

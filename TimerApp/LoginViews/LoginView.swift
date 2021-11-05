@@ -33,11 +33,9 @@ struct LoginView: View {
     }
 }
 
-extension LoginView {
-    
-    private func logIn() {
-        user.name = loginState.login
-        user.isLoggedIn.toggle()
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
     }
 }
 
@@ -53,6 +51,15 @@ struct BackgroundColorView: View {
     }
 }
 
+extension LoginView {
+    
+    private func logIn() {
+        user.name = loginState.login
+        user.isLoggedIn.toggle()
+    }
+}
+
+
 extension View {
     
     func hideKeyboard() {
@@ -65,8 +72,3 @@ extension View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
