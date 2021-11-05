@@ -9,13 +9,13 @@ import SwiftUI
 
 struct StartButtonView: View {
     
-    let action: () -> Void
-    
     @ObservedObject var timer: Counter
+    
+    let action: () -> Void
     
     var body: some View {
         Button(action: action) {
-            Text(timer.buttonText)
+            Text(timer.buttonTitle)
                 .bold()
                 .font(.title)
                 .foregroundColor(.white)
@@ -33,6 +33,6 @@ struct StartButtonView: View {
 
 struct StartButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        StartButtonView(action: {}, timer: Counter())
+        StartButtonView(timer: Counter(), action: {})
     }
 }

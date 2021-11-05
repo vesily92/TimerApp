@@ -11,23 +11,19 @@ struct LogOutButtonView: View {
     
     @EnvironmentObject private var user: UserManager
     
+    let action: () -> Void
+    
     var body: some View {
-        Button(action: logOut) {
+        Button(action: action) {
             Text("Log out")
                 .font(.system(size: 20))
                 .foregroundColor(.blue)
-        }
-    }
-    
-    private func logOut() {
-        if user.isLoggedIn == true {
-            user.isLoggedIn.toggle()
         }
     }
 }
 
 struct LogOutButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        LogOutButtonView()
+        LogOutButtonView(action: {})
     }
 }

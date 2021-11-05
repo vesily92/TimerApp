@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @StateObject private var loginState = LoginObserver()
+    @EnvironmentObject private var user: UserManager
     @FocusState private var isFocused: Bool
     
     var body: some View {
@@ -25,7 +26,7 @@ struct LoginView: View {
                     .padding(
                         EdgeInsets(top: 0, leading: 30, bottom: 50, trailing: 70)
                     )
-                LoginButtonView(log: loginState)
+                LoginButtonView(log: loginState, action: logIn)
             }
             .padding(EdgeInsets(top: 40, leading: 20, bottom: 40, trailing: 20))
             .background(Color.white)
@@ -34,6 +35,14 @@ struct LoginView: View {
         }
         .focused($isFocused)
         .onTapGesture { hideKeyboard() }
+    }
+}
+
+extension LoginView {
+    
+    private func logIn() {
+        user.name = loginState.login
+        user.isLoggedIn.toggle()
     }
 }
 
@@ -61,7 +70,7 @@ extension View {
     }
 }
 
-struct View2_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }

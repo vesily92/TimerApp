@@ -20,7 +20,7 @@ struct LoginTextFieldView: View {
                 .textFieldStyle(.roundedBorder)
                 .foregroundColor(
                     log.colorChange
-                    ? .textGray
+                    ? .disabledTextGray
                     : .black
                 )
             
@@ -43,7 +43,7 @@ struct CharCount2: View {
         ZStack {
             RoundedRectangle(cornerRadius: 5)
                 .frame(width: 34, height: 34)
-                .foregroundColor(.backgroundGray)
+                .foregroundColor(.counterBackgroundGray)
 
             Text("\(log.login.count)")
                 .bold()

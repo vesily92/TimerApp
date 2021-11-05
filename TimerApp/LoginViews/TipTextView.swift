@@ -32,6 +32,9 @@ struct TipTextView: View {
                 .font(.subheadline)
         }
     }
+}
+
+extension TipTextView {
     
     private func removeS() -> String {
         if log.minCharacters - log.login.count == 1 {

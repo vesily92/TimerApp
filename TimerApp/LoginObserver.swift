@@ -24,7 +24,6 @@ class LoginObserver: ObservableObject {
     var colorChange = true
     var isDisabled = true
     
-    
     func inputCheck() {
         if login.count < minCharacters || login.count > maxCharacters {
             colorChange = true

@@ -12,8 +12,10 @@ struct LoginButtonView: View {
     @ObservedObject var log: LoginObserver
     @EnvironmentObject private var user: UserManager
     
+    let action: () -> Void
+    
     var body: some View {
-        Button(action: logIn) {
+        Button(action: action) {
             Text(log.buttonTitle)
                 .bold()
                 .font(.title)
@@ -32,15 +34,10 @@ struct LoginButtonView: View {
             : false
         )
     }
-    
-    private func logIn() {
-        user.name = log.login
-        user.isLoggedIn.toggle()
-    }
 }
 
 struct Button2_Previews: PreviewProvider {
     static var previews: some View {
-        LoginButtonView(log: LoginObserver())
+        LoginButtonView(log: LoginObserver(), action: {})
     }
 }

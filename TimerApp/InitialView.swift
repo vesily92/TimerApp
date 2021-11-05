@@ -16,7 +16,6 @@ struct InitialView: View {
             if user.isLoggedIn {
                 ContentView()
             } else {
-                //LoginView()
                 LoginView()
             }
         }

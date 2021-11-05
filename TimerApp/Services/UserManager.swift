@@ -5,12 +5,10 @@
 //  Created by Василий Пронин on 03.11.2021.
 //
 
-import Combine
+import SwiftUI
 
 final class UserManager: ObservableObject {
     
-    @Published var isLoggedIn = false
-    
-    var name = ""
-    
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+    @AppStorage("name") var name = ""
 }

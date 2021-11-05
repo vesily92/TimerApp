@@ -27,9 +27,9 @@ struct ContentView: View {
                 .padding()
             
             VStack(spacing: 16) {
-                StartButtonView(action: { timer.startTimer() }, timer: timer)
+                StartButtonView(timer: timer, action: { timer.startTimer() })
                     .padding(.bottom, 16)
-                LogOutButtonView()
+                LogOutButtonView(action: logOut)
             }
         }
     }
@@ -41,3 +41,11 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+extension ContentView {
+    
+    private func logOut() {
+        if user.isLoggedIn == true {
+            user.isLoggedIn.toggle()
+        }
+    }
+}
