@@ -12,4 +12,5 @@ final class UserManager: ObservableObject {
     @Published var isLoggedIn = false
     
     var name = ""
+    
 }

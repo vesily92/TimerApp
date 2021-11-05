@@ -22,20 +22,15 @@ struct ContentView: View {
                 .padding()
             
             Text("\(timer.counter)")
-                .font(.system(size: 64))
                 .bold()
+                .font(.system(size: 64))
                 .padding()
             
             VStack(spacing: 16) {
                 StartButtonView(action: { timer.startTimer() }, timer: timer)
                     .padding(.bottom, 16)
-                LogOutButtonView(action: logOut)
+                LogOutButtonView()
             }
-        }
-    }
-    private func logOut() {
-        if user.isLoggedIn == true {
-            user.isLoggedIn.toggle()
         }
     }
 }
@@ -45,3 +40,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

@@ -5,7 +5,6 @@
 //  Created by Василий Пронин on 02.11.2021.
 //
 
-import Foundation
 import Combine
 import SwiftUI
 
@@ -29,7 +28,6 @@ class Counter: ObservableObject {
         }
         buttonTapped()
     }
-    
     
     @objc private func updateCounter() {
         if counter > 0 {
