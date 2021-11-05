@@ -29,7 +29,7 @@ struct LoginView: View {
             .padding()
         }
         .focused($isFocused)
-        .onTapGesture { hideKeyboard() }
+        .onTapGesture { isFocused.toggle() }
     }
 }
 
@@ -56,19 +56,6 @@ extension LoginView {
     private func logIn() {
         user.name = loginState.login
         user.isLoggedIn.toggle()
-    }
-}
-
-
-extension View {
-    
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(
-            #selector(UIResponder.resignFirstResponder),
-            to: nil,
-            from: nil,
-            for: nil
-        )
     }
 }
 
