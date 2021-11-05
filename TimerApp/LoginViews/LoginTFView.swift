@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OldLoginTFView: View {
+struct LoginTFView: View {
     
     @Binding var login: String
     
@@ -28,7 +28,7 @@ struct OldLoginTFView: View {
 
 struct LoginTFView_Previews: PreviewProvider {
     static var previews: some View {
-        OldLoginTFView(login: .constant("Login"))
+        LoginTFView(login: .constant("Login"))
     }
 }
 

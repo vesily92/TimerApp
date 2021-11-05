@@ -2,28 +2,29 @@
 //  TipTextView.swift
 //  TimerApp
 //
-//  Created by Василий Пронин on 04.11.2021.
+//  Created by Василий Пронин on 03.11.2021.
 //
 
 import SwiftUI
 
 struct TipTextView: View {
     
-    @ObservedObject var log: LoginObserver
+    @Binding var login: String
     
     var body: some View {
+        
         ZStack {
             Text(
-                log.login.count >= log.minCharacters
+                login.count >= 3
                 ? "\n"
-                : "Please, add \(log.minCharacters - log.login.count) more \(removeS()) to your Login!"
+                : "Please, add \(3 - login.count) more \(removeS()) to your Login!"
             )
                 .foregroundColor(.gray)
                 .opacity(0.8)
                 .font(.subheadline)
             
             Text(
-                log.login.count <= log.maxCharacters
+                login.count <= 15
                 ? "\n"
                 : "Your Login must not contain more than 15 characters!"
             )
@@ -32,12 +33,9 @@ struct TipTextView: View {
                 .font(.subheadline)
         }
     }
-}
-
-extension TipTextView {
     
     private func removeS() -> String {
-        if log.minCharacters - log.login.count == 1 {
+        if 3 - login.count == 1 {
             return "character"
         } else {
             return "characters"

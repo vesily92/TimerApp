@@ -1,43 +1,42 @@
 //
-//  LoginButtonView.swift
+//  SignInButtonView.swift
 //  TimerApp
 //
-//  Created by Василий Пронин on 04.11.2021.
+//  Created by Василий Пронин on 03.11.2021.
 //
 
 import SwiftUI
 
-struct LoginButtonView: View {
-    
-    @ObservedObject var log: LoginObserver
-    @EnvironmentObject private var user: UserManager
+struct SignInButtonView: View {
     
     let action: () -> Void
     
+    @Binding var login: String
+    
     var body: some View {
         Button(action: action) {
-            Text(log.buttonTitle)
+            Text("sign in")
                 .bold()
                 .font(.title)
                 .foregroundColor(.white)
         }
         .frame(width: 180, height: 60)
         .background(
-            log.colorChange
+            login.count < 3 || login.count > 15
             ? Color.disabledButtonGray
             : .blue
         )
         .cornerRadius(20)
         .disabled(
-            log.isDisabled
+            login.count < 3 || login.count > 15
             ? true
             : false
         )
     }
 }
 
-struct Button2_Previews: PreviewProvider {
+struct SignInButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginButtonView(log: LoginObserver(), action: {})
+        SignInButtonView(action: {}, login: .constant("Bob"))
     }
 }

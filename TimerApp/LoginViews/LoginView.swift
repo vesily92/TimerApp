@@ -1,16 +1,18 @@
 //
-//  View2.swift
+//  LoginView.swift
 //  TimerApp
 //
-//  Created by Василий Пронин on 04.11.2021.
+//  Created by Василий Пронин on 03.11.2021.
 //
 
 import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject private var loginState = LoginObserver()
+    @State private var login = ""
+    
     @EnvironmentObject private var user: UserManager
+    
     @FocusState private var isFocused: Bool
     
     var body: some View {
@@ -18,15 +20,15 @@ struct LoginView: View {
             BackgroundColorView()
             
             VStack {
-                LoginTextFieldView(log: loginState)
+                LoginTFView(login: $login)
                     .padding(
                         EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
                     )
-                TipTextView(log: loginState)
+                TipTextView(login: $login)
                     .padding(
                         EdgeInsets(top: 0, leading: 30, bottom: 50, trailing: 70)
                     )
-                LoginButtonView(log: loginState, action: logIn)
+                SignInButtonView(action: logIn, login: $login)
             }
             .padding(EdgeInsets(top: 40, leading: 20, bottom: 40, trailing: 20))
             .background(Color.white)
@@ -36,13 +38,18 @@ struct LoginView: View {
         .focused($isFocused)
         .onTapGesture { hideKeyboard() }
     }
-}
-
-extension LoginView {
     
     private func logIn() {
-        user.name = loginState.login
-        user.isLoggedIn.toggle()
+        if login.count >= 3 {
+            user.name = login
+            user.isLoggedIn.toggle()
+        }
+    }
+}
+
+struct OldLoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
     }
 }
 
@@ -58,6 +65,7 @@ struct BackgroundColorView: View {
     }
 }
 
+
 extension View {
     
     func hideKeyboard() {
@@ -67,11 +75,5 @@ extension View {
             from: nil,
             for: nil
         )
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
     }
 }
