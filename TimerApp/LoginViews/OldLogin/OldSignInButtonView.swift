@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignInButtonView: View {
+struct OldSignInButtonView: View {
     
     let action: () -> Void
     
@@ -22,17 +22,21 @@ struct SignInButtonView: View {
         }
         .frame(width: 180, height: 60)
         .background(
-            login.count >= 3
-            ? .blue
-            : Color(red: 0.9, green: 0.9, blue: 0.9)
+            login.count < 3 || login.count > 15
+            ? Color.disabledButtonGray
+            : .blue
         )
         .cornerRadius(20)
-        .disabled(login.count >= 3 ? false : true)
+        .disabled(
+            login.count < 3 || login.count > 15
+            ? true
+            : false
+        )
     }
 }
 
 struct SignInButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInButtonView(action: {}, login: .constant("Bob"))
+        OldSignInButtonView(action: {}, login: .constant("Bob"))
     }
 }
