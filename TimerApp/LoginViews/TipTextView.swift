@@ -18,23 +18,17 @@ struct TipTextView: View {
                 ? "\n"
                 : "Please, add \(log.minCharacters - log.login.count) more \(removeS()) to your Login!"
             )
-                .multilineTextAlignment(.leading)
-                
-                .foregroundColor(.gray)
-                .opacity(0.8)
-                .font(.subheadline)
             
             Text(
                 log.login.count <= log.maxCharacters
                 ? "\n"
                 : "Your Login must not contain more than 15 characters!"
             )
-                .multilineTextAlignment(.leading)
-                
-                .foregroundColor(.gray)
-                .opacity(0.8)
-                .font(.subheadline)
         }
+        .multilineTextAlignment(.leading)
+        .foregroundColor(.gray)
+        .opacity(0.8)
+        .font(.subheadline)
     }
 }
 

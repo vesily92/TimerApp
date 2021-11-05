@@ -30,7 +30,7 @@ struct ContentView: View {
                 StartButtonView(timer: timer, action: { timer.startTimer() })
                 LogOutButtonView(action: logOut)
             }
-            .padding()
+            .padding(.bottom, 32)
         }
     }
 }

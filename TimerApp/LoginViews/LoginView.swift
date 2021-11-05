@@ -18,11 +18,10 @@ struct LoginView: View {
             BackgroundColorView()
             
             VStack {
-                VStack {
-                    LoginTextFieldView(log: loginState)
-                    TipTextView(log: loginState)
-                }
-                .padding(.bottom, 20)
+                
+                LoginTextFieldView(log: loginState)
+                TipTextView(log: loginState)
+                    .padding(.bottom, 20)
                 
                 LoginButtonView(log: loginState, action: logIn)
             }

@@ -26,7 +26,8 @@ struct StartButtonView: View {
         .background(
             timer.colorChange
             ? Color.disabledButtonGray
-            : .orange)
+            : .orange
+        )
         .cornerRadius(20)
     }
 }

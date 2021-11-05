@@ -23,9 +23,10 @@ struct LoginTextFieldView: View {
                     ? .disabledTextGray
                     : .black
                 )
-            
+
             CharacterCounter(log: log)
         }
+        
     }
 }
 
