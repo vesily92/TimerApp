@@ -44,8 +44,8 @@ struct ContentView_Previews: PreviewProvider {
 extension ContentView {
     
     private func logOut() {
-        if user.isLoggedIn == true {
-            user.isLoggedIn.toggle()
+        if user.isLoggedIn {
+            user.isLoggedIn = false
         }
     }
 }
