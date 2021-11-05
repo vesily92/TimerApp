@@ -18,11 +18,9 @@ struct LoginView: View {
             BackgroundColorView()
             
             VStack {
-                
                 LoginTextFieldView(log: loginState)
                 TipTextView(log: loginState)
                     .padding(.bottom, 20)
-                
                 LoginButtonView(log: loginState, action: logIn)
             }
             .padding(EdgeInsets(top: 40, leading: 20, bottom: 40, trailing: 20))

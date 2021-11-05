@@ -23,37 +23,13 @@ struct LoginTextFieldView: View {
                     ? .disabledTextGray
                     : .black
                 )
-
-            CharacterCounter(log: log)
+            CharacterCounterView(log: log)
         }
-        
     }
 }
 
 struct TextField2_Previews: PreviewProvider {
     static var previews: some View {
         LoginTextFieldView(log: LoginObserver())
-    }
-}
-
-struct CharacterCounter: View {
-    
-    @ObservedObject var log: LoginObserver
-    
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 5)
-                .frame(width: 34, height: 34)
-                .foregroundColor(.counterBackgroundGray)
-
-            Text("\(log.login.count)")
-                .bold()
-                .foregroundColor(
-                    log.colorChange
-                    ? .red
-                    : .green
-                )
-            .frame(width: 30)
-        }
     }
 }
