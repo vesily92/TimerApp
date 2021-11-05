@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B64938827358640000A71C2 /* CharacterCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6493872735863F000A71C2 /* CharacterCounterView.swift */; };
 		7B9AEDD427318626009111DF /* TimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDD327318626009111DF /* TimerAppApp.swift */; };
 		7B9AEDD627318626009111DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDD527318626009111DF /* ContentView.swift */; };
 		7B9AEDD82731862A009111DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9AEDD72731862A009111DF /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B6493872735863F000A71C2 /* CharacterCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCounterView.swift; sourceTree = "<group>"; };
 		7B9AEDD027318626009111DF /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9AEDD327318626009111DF /* TimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppApp.swift; sourceTree = "<group>"; };
 		7B9AEDD527318626009111DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,8 +98,9 @@
 			children = (
 				7B9AEDE52732BB29009111DF /* LoginView.swift */,
 				7B9AEDFE27340AE3009111DF /* LoginTFView.swift */,
-				7B9AEDED2732D205009111DF /* SignInButtonView.swift */,
+				7B6493872735863F000A71C2 /* CharacterCounterView.swift */,
 				7B9AEDF427331872009111DF /* TipTextView.swift */,
+				7B9AEDED2732D205009111DF /* SignInButtonView.swift */,
 			);
 			path = LoginViews;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				7B9AEDFF27340AE3009111DF /* LoginTFView.swift in Sources */,
 				7B9AEDEE2732D205009111DF /* SignInButtonView.swift in Sources */,
 				7B9AEDEA2732C01C009111DF /* InitialView.swift in Sources */,
+				7B64938827358640000A71C2 /* CharacterCounterView.swift in Sources */,
 				7B9AEDE227318852009111DF /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

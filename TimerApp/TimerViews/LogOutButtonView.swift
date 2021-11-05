@@ -9,8 +9,6 @@ import SwiftUI
 
 struct LogOutButtonView: View {
     
-    @EnvironmentObject private var user: UserManager
-    
     let action: () -> Void
     
     var body: some View {

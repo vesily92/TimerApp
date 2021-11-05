@@ -32,25 +32,4 @@ struct LoginTFView_Previews: PreviewProvider {
     }
 }
 
-struct CharacterCounterView: View {
-    
-    @Binding var login: String
-    
-    var body: some View {
-        
-        ZStack {
-            RoundedRectangle(cornerRadius: 5)
-                .frame(width: 34, height: 34)
-                .foregroundColor(.counterBackgroundGray)
-            
-            Text("\(login.count)")
-                .bold()
-                .foregroundColor(
-                    login.count < 3 || login.count > 15
-                    ? .red
-                    : .green
-                )
-            .frame(width: 30)
-        }
-    }
-}
+

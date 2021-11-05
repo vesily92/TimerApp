@@ -19,19 +19,16 @@ struct TipTextView: View {
                 ? "\n"
                 : "Please, add \(3 - login.count) more \(removeS()) to your Login!"
             )
-                .foregroundColor(.gray)
-                .opacity(0.8)
-                .font(.subheadline)
             
             Text(
                 login.count <= 15
                 ? "\n"
                 : "Your Login must not contain more than 15 characters!"
             )
-                .foregroundColor(.gray)
-                .opacity(0.8)
-                .font(.subheadline)
         }
+        .foregroundColor(.gray)
+        .opacity(0.8)
+        .font(.subheadline)
     }
     
     private func removeS() -> String {

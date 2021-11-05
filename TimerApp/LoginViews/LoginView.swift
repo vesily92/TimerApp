@@ -21,13 +21,9 @@ struct LoginView: View {
             
             VStack {
                 LoginTFView(login: $login)
-                    .padding(
-                        EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
-                    )
                 TipTextView(login: $login)
-                    .padding(
-                        EdgeInsets(top: 0, leading: 30, bottom: 50, trailing: 70)
-                    )
+                    .padding(.bottom, 20)
+                
                 SignInButtonView(action: logIn, login: $login)
             }
             .padding(EdgeInsets(top: 40, leading: 20, bottom: 40, trailing: 20))

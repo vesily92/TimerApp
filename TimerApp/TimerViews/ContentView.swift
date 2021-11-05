@@ -13,24 +13,24 @@ struct ContentView: View {
     @EnvironmentObject private var user: UserManager
     
     var body: some View {
-        VStack(spacing: 160) {
+        VStack {
             Text("Wellcome, \(user.name)!\n✌️")
                 .bold()
                 .multilineTextAlignment(.center)
                 .font(.largeTitle)
                 .foregroundColor(.black)
                 .padding()
-            
+            Spacer()
             Text("\(timer.counter)")
                 .bold()
                 .font(.system(size: 64))
                 .padding()
-            
-            VStack(spacing: 16) {
+            Spacer()
+            VStack(spacing: 32) {
                 StartButtonView(timer: timer, action: { timer.startTimer() })
-                    .padding(.bottom, 16)
                 LogOutButtonView(action: logOut)
             }
+            .padding(.bottom, 32)
         }
     }
 }
