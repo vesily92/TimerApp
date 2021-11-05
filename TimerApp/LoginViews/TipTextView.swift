@@ -18,6 +18,8 @@ struct TipTextView: View {
                 ? "\n"
                 : "Please, add \(log.minCharacters - log.login.count) more \(removeS()) to your Login!"
             )
+                .multilineTextAlignment(.leading)
+                
                 .foregroundColor(.gray)
                 .opacity(0.8)
                 .font(.subheadline)
@@ -27,10 +29,18 @@ struct TipTextView: View {
                 ? "\n"
                 : "Your Login must not contain more than 15 characters!"
             )
+                .multilineTextAlignment(.leading)
+                
                 .foregroundColor(.gray)
                 .opacity(0.8)
                 .font(.subheadline)
         }
+    }
+}
+
+struct TipTextView_Previews: PreviewProvider {
+    static var previews: some View {
+        TipTextView(log: LoginObserver())
     }
 }
 

@@ -24,7 +24,7 @@ struct LoginTextFieldView: View {
                     : .black
                 )
             
-            CharCount2(log: log)
+            CharacterCounter(log: log)
         }
     }
 }
@@ -35,7 +35,7 @@ struct TextField2_Previews: PreviewProvider {
     }
 }
 
-struct CharCount2: View {
+struct CharacterCounter: View {
     
     @ObservedObject var log: LoginObserver
     
