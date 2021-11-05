@@ -13,14 +13,10 @@
 		7B9AEDDB2731862A009111DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9AEDDA2731862A009111DF /* Preview Assets.xcassets */; };
 		7B9AEDE227318852009111DF /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDE127318852009111DF /* Counter.swift */; };
 		7B9AEDE42732B8E9009111DF /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDE32732B8E9009111DF /* StartButtonView.swift */; };
-		7B9AEDE62732BB29009111DF /* OldLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDE52732BB29009111DF /* OldLoginView.swift */; };
 		7B9AEDE82732BCF4009111DF /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDE72732BCF4009111DF /* UserManager.swift */; };
 		7B9AEDEA2732C01C009111DF /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDE92732C01C009111DF /* InitialView.swift */; };
-		7B9AEDEE2732D205009111DF /* OldSignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDED2732D205009111DF /* OldSignInButtonView.swift */; };
 		7B9AEDF32732D9D5009111DF /* LogOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDF22732D9D5009111DF /* LogOutButtonView.swift */; };
-		7B9AEDF527331872009111DF /* OldTipTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDF427331872009111DF /* OldTipTextView.swift */; };
 		7B9AEDFD2734047D009111DF /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDFC2734047D009111DF /* ColorManager.swift */; };
-		7B9AEDFF27340AE3009111DF /* OldLoginTFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDFE27340AE3009111DF /* OldLoginTFView.swift */; };
 		7B9AEE0127340DBE009111DF /* LoginObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEE0027340DBE009111DF /* LoginObserver.swift */; };
 		7B9AEE0327341BD0009111DF /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEE0227341BD0009111DF /* LoginButtonView.swift */; };
 		7B9AEE0527341D04009111DF /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEE0427341D04009111DF /* LoginTextFieldView.swift */; };
@@ -36,14 +32,10 @@
 		7B9AEDDA2731862A009111DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B9AEDE127318852009111DF /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		7B9AEDE32732B8E9009111DF /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
-		7B9AEDE52732BB29009111DF /* OldLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldLoginView.swift; sourceTree = "<group>"; };
 		7B9AEDE72732BCF4009111DF /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		7B9AEDE92732C01C009111DF /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
-		7B9AEDED2732D205009111DF /* OldSignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldSignInButtonView.swift; sourceTree = "<group>"; };
 		7B9AEDF22732D9D5009111DF /* LogOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonView.swift; sourceTree = "<group>"; };
-		7B9AEDF427331872009111DF /* OldTipTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldTipTextView.swift; sourceTree = "<group>"; };
 		7B9AEDFC2734047D009111DF /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
-		7B9AEDFE27340AE3009111DF /* OldLoginTFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldLoginTFView.swift; sourceTree = "<group>"; };
 		7B9AEE0027340DBE009111DF /* LoginObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginObserver.swift; sourceTree = "<group>"; };
 		7B9AEE0227341BD0009111DF /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 		7B9AEE0427341D04009111DF /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
@@ -109,7 +101,6 @@
 				7B9AEE0427341D04009111DF /* LoginTextFieldView.swift */,
 				7B9AEE0227341BD0009111DF /* LoginButtonView.swift */,
 				7B9AEE0627341EF3009111DF /* TipTextView.swift */,
-				7B9AEE0B27354C5A009111DF /* OldLogin */,
 			);
 			path = LoginViews;
 			sourceTree = "<group>";
@@ -131,17 +122,6 @@
 				7B9AEDFC2734047D009111DF /* ColorManager.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		7B9AEE0B27354C5A009111DF /* OldLogin */ = {
-			isa = PBXGroup;
-			children = (
-				7B9AEDE52732BB29009111DF /* OldLoginView.swift */,
-				7B9AEDFE27340AE3009111DF /* OldLoginTFView.swift */,
-				7B9AEDED2732D205009111DF /* OldSignInButtonView.swift */,
-				7B9AEDF427331872009111DF /* OldTipTextView.swift */,
-			);
-			path = OldLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,16 +199,12 @@
 				7B9AEDE82732BCF4009111DF /* UserManager.swift in Sources */,
 				7B9AEE0727341EF3009111DF /* TipTextView.swift in Sources */,
 				7B9AEDD627318626009111DF /* ContentView.swift in Sources */,
-				7B9AEDF527331872009111DF /* OldTipTextView.swift in Sources */,
 				7B9AEDF32732D9D5009111DF /* LogOutButtonView.swift in Sources */,
 				7B9AEE0527341D04009111DF /* LoginTextFieldView.swift in Sources */,
 				7B9AEDE42732B8E9009111DF /* StartButtonView.swift in Sources */,
 				7B9AEDFD2734047D009111DF /* ColorManager.swift in Sources */,
 				7B9AEE0127340DBE009111DF /* LoginObserver.swift in Sources */,
 				7B9AEDD427318626009111DF /* TimerAppApp.swift in Sources */,
-				7B9AEDE62732BB29009111DF /* OldLoginView.swift in Sources */,
-				7B9AEDFF27340AE3009111DF /* OldLoginTFView.swift in Sources */,
-				7B9AEDEE2732D205009111DF /* OldSignInButtonView.swift in Sources */,
 				7B9AEDEA2732C01C009111DF /* InitialView.swift in Sources */,
 				7B9AEDE227318852009111DF /* Counter.swift in Sources */,
 			);
