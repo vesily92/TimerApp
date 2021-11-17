@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CharacterCounterView: View {
-    
     @ObservedObject var log: LoginObserver
     
     var body: some View {

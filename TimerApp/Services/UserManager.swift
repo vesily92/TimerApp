@@ -8,7 +8,6 @@
 import SwiftUI
 
 final class UserManager: ObservableObject {
-    
     @AppStorage("isLoggedIn") var isLoggedIn = false
     @AppStorage("name") var name = ""
 }

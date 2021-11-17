@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LoginButtonView: View {
-    
     @ObservedObject var log: LoginObserver
     @EnvironmentObject private var user: UserManager
     

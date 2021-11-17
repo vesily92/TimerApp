@@ -9,9 +9,7 @@ import Combine
 import SwiftUI
 
 class LoginObserver: ObservableObject {
-    
     let objectWillChange = PassthroughSubject<LoginObserver, Never>()
-    
     let minCharacters = 3
     let maxCharacters = 15
     let buttonTitle = "sign in"

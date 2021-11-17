@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LogOutButtonView: View {
-    
     let action: () -> Void
     
     var body: some View {

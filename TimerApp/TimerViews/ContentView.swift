@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @StateObject private var timer = Counter()
     @EnvironmentObject private var user: UserManager
     

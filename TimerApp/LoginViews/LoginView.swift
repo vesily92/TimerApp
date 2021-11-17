@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LoginView: View {
-    
     @StateObject private var loginState = LoginObserver()
     @EnvironmentObject private var user: UserManager
     @FocusState private var isFocused: Bool

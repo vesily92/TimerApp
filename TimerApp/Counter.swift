@@ -9,7 +9,6 @@ import Combine
 import SwiftUI
 
 class Counter: ObservableObject {
-    
     let objectWillChange = PassthroughSubject<Counter, Never>()
     var counter = 3
     var timer: Timer?
