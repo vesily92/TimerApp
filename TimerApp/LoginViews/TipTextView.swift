@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct TipTextView: View {
-    
-    @ObservedObject var log: LoginObserver
+    let minValue = 3
+    let maxValue = 15
+    var count = 0
     
     var body: some View {
         ZStack {
             Text(
-                log.login.count >= log.minCharacters
+                count >= minValue
                 ? "\n"
-                : "Please, add \(log.minCharacters - log.login.count) more \(removeS()) to your Login!"
+                : "Please, add \(minValue - count) more \(removeS()) to your Login!"
             )
             
             Text(
-                log.login.count <= log.maxCharacters
+                count <= maxValue
                 ? "\n"
                 : "Your Login must not contain more than 15 characters!"
             )
@@ -34,14 +35,14 @@ struct TipTextView: View {
 
 struct TipTextView_Previews: PreviewProvider {
     static var previews: some View {
-        TipTextView(log: LoginObserver())
+        TipTextView()
     }
 }
 
 extension TipTextView {
     
     private func removeS() -> String {
-        if log.minCharacters - log.login.count == 1 {
+        if minValue - count == 1 {
             return "character"
         } else {
             return "characters"

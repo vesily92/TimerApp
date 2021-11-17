@@ -8,36 +8,29 @@
 import SwiftUI
 
 struct LoginButtonView: View {
-    
-    @ObservedObject var log: LoginObserver
-    @EnvironmentObject private var user: UserManager
-    
     let action: () -> Void
+    var check = false
     
     var body: some View {
         Button(action: action) {
-            Text(log.buttonTitle)
+            Text("sign in")
                 .bold()
                 .font(.title)
                 .foregroundColor(.white)
         }
         .frame(width: 180, height: 60)
         .background(
-            log.colorChange
-            ? Color.disabledButtonGray
-            : .blue
+            check
+            ? .blue
+            : Color.disabledButtonGray
         )
         .cornerRadius(20)
-        .disabled(
-            log.isDisabled
-            ? true
-            : false
-        )
+        .disabled(!check)
     }
 }
 
 struct Button2_Previews: PreviewProvider {
     static var previews: some View {
-        LoginButtonView(log: LoginObserver(), action: {})
+        LoginButtonView(action: {}, check: false)
     }
 }

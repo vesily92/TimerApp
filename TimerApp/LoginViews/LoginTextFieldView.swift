@@ -8,28 +8,42 @@
 import SwiftUI
 
 struct LoginTextFieldView: View {
+    @Binding var name: String
     
-    @ObservedObject var log: LoginObserver
+    var count = 0
+    var check = false
     
     var body: some View {
         HStack {
-            TextField("Login", text: $log.login)
-                .onChange(of: log.login) { _ in
-                    log.inputCheck()
-                }
+            TextField("Login", text: $name)
                 .textFieldStyle(.roundedBorder)
                 .foregroundColor(
-                    log.colorChange
+                    check
                     ? .disabledTextGray
                     : .black
                 )
-            CharacterCounterView(log: log)
+            CharacterCounterView(count: count, check: check)
         }
     }
+    
+    
+    
+//    {
+//        HStack {
+//            TextField("Login", text: $name)
+//                .textFieldStyle(.roundedBorder)
+//                .foregroundColor(
+//                    userManager.nameIsValid
+//                    ? .disabledTextGray
+//                    : .black
+//                )
+//            CharacterCounterView(log: log)
+//        }
+//    }
 }
 
 struct TextField2_Previews: PreviewProvider {
     static var previews: some View {
-        LoginTextFieldView(log: LoginObserver())
+        LoginTextFieldView(name: .constant("name"))
     }
 }

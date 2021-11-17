@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct StartButtonView: View {
-    
     @ObservedObject var timer: Counter
     
     let action: () -> Void

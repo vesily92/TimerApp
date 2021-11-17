@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CharacterCounterView: View {
-    
-    @ObservedObject var log: LoginObserver
+    var count = 0
+    var check = false
     
     var body: some View {
         ZStack {
@@ -17,12 +17,12 @@ struct CharacterCounterView: View {
                 .frame(width: 34, height: 34)
                 .foregroundColor(.counterBackgroundGray)
 
-            Text("\(log.login.count)")
+            Text("\(count)")
                 .bold()
                 .foregroundColor(
-                    log.colorChange
-                    ? .red
-                    : .green
+                    check
+                    ? .green
+                    : .red
                 )
             .frame(width: 30)
         }
@@ -31,6 +31,6 @@ struct CharacterCounterView: View {
 
 struct CharacterCounterView_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterCounterView(log: LoginObserver())
+        CharacterCounterView(count: 4, check: true)
     }
 }

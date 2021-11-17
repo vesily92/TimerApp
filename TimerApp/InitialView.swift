@@ -9,11 +9,11 @@ import SwiftUI
 
 struct InitialView: View {
     
-    @EnvironmentObject private var user: UserManager
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         Group {
-            if user.isLoggedIn {
+            if userManager.user.isLoggedIn {
                 ContentView()
             } else {
                 LoginView()

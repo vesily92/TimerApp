@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @StateObject private var timer = Counter()
-    @EnvironmentObject private var user: UserManager
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         VStack {
-            Text("Wellcome, \(user.name)!\n✌️")
+            Text("Wellcome, \(userManager.user.name)!\n✌️")
                 .bold()
                 .multilineTextAlignment(.center)
                 .font(.largeTitle)
@@ -42,10 +41,9 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 extension ContentView {
-    
     private func logOut() {
-        if user.isLoggedIn {
-            user.isLoggedIn = false
+        if userManager.user.isLoggedIn {
+            userManager.user.isLoggedIn = false
         }
     }
 }

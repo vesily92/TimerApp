@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B64938627358336000A71C2 /* CharacterCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64938527358336000A71C2 /* CharacterCounterView.swift */; };
+		7B64938A2743D1B2000A71C2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6493892743D1B1000A71C2 /* DataManager.swift */; };
 		7B9AEDD427318626009111DF /* TimerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDD327318626009111DF /* TimerAppApp.swift */; };
 		7B9AEDD627318626009111DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDD527318626009111DF /* ContentView.swift */; };
 		7B9AEDD82731862A009111DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9AEDD72731862A009111DF /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		7B64938527358336000A71C2 /* CharacterCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCounterView.swift; sourceTree = "<group>"; };
+		7B6493892743D1B1000A71C2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7B9AEDD027318626009111DF /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9AEDD327318626009111DF /* TimerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppApp.swift; sourceTree = "<group>"; };
 		7B9AEDD527318626009111DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				7B9AEDE72732BCF4009111DF /* UserManager.swift */,
+				7B6493892743D1B1000A71C2 /* DataManager.swift */,
 				7B9AEDFC2734047D009111DF /* ColorManager.swift */,
 			);
 			path = Services;
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B9AEE0327341BD0009111DF /* LoginButtonView.swift in Sources */,
+				7B64938A2743D1B2000A71C2 /* DataManager.swift in Sources */,
 				7B9AEE0927342EB0009111DF /* LoginView.swift in Sources */,
 				7B9AEDE82732BCF4009111DF /* UserManager.swift in Sources */,
 				7B9AEE0727341EF3009111DF /* TipTextView.swift in Sources */,

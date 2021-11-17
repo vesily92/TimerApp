@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    
     @StateObject private var loginState = LoginObserver()
-    @EnvironmentObject private var user: UserManager
+    @EnvironmentObject private var userManager: UserManager
     @FocusState private var isFocused: Bool
     
     var body: some View {
@@ -18,10 +17,17 @@ struct LoginView: View {
             BackgroundColorView()
             
             VStack {
-                LoginTextFieldView(log: loginState)
-                TipTextView(log: loginState)
+                LoginTextFieldView(
+                    name: $userManager.user.name,
+                    count: userManager.characterCount,
+                    check: userManager.nameIsValid
+                )
+                TipTextView(count: userManager.characterCount)
                     .padding(.bottom, 20)
-                LoginButtonView(log: loginState, action: logIn)
+                LoginButtonView(
+                    action: logIn,
+                    check: userManager.nameIsValid
+                )
             }
             .padding(EdgeInsets(top: 40, leading: 20, bottom: 40, trailing: 20))
             .background(Color.white)
@@ -54,8 +60,10 @@ struct BackgroundColorView: View {
 extension LoginView {
     
     private func logIn() {
-        user.name = loginState.login
-        user.isLoggedIn.toggle()
+        if !userManager.user.name.isEmpty {
+            userManager.user.isLoggedIn.toggle()
+            DataManager.shared.save(userManager.user)
+        }
     }
 }
 
