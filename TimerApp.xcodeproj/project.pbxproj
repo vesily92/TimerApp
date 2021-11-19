@@ -19,7 +19,6 @@
 		7B9AEDEA2732C01C009111DF /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDE92732C01C009111DF /* InitialView.swift */; };
 		7B9AEDF32732D9D5009111DF /* LogOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDF22732D9D5009111DF /* LogOutButtonView.swift */; };
 		7B9AEDFD2734047D009111DF /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEDFC2734047D009111DF /* ColorManager.swift */; };
-		7B9AEE0127340DBE009111DF /* LoginObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEE0027340DBE009111DF /* LoginObserver.swift */; };
 		7B9AEE0327341BD0009111DF /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEE0227341BD0009111DF /* LoginButtonView.swift */; };
 		7B9AEE0527341D04009111DF /* LoginTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEE0427341D04009111DF /* LoginTextFieldView.swift */; };
 		7B9AEE0727341EF3009111DF /* TipTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9AEE0627341EF3009111DF /* TipTextView.swift */; };
@@ -40,7 +39,6 @@
 		7B9AEDE92732C01C009111DF /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		7B9AEDF22732D9D5009111DF /* LogOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonView.swift; sourceTree = "<group>"; };
 		7B9AEDFC2734047D009111DF /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
-		7B9AEE0027340DBE009111DF /* LoginObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginObserver.swift; sourceTree = "<group>"; };
 		7B9AEE0227341BD0009111DF /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 		7B9AEE0427341D04009111DF /* LoginTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
 		7B9AEE0627341EF3009111DF /* TipTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTextView.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				7B9AEDD327318626009111DF /* TimerAppApp.swift */,
 				7B9AEDE92732C01C009111DF /* InitialView.swift */,
 				7B9AEDE127318852009111DF /* Counter.swift */,
-				7B9AEE0027340DBE009111DF /* LoginObserver.swift */,
 				7B9AEDF02732D79C009111DF /* TimerViews */,
 				7B9AEDEF2732D74F009111DF /* LoginViews */,
 				7B9AEDF12732D7EA009111DF /* Services */,
@@ -210,7 +207,6 @@
 				7B9AEE0527341D04009111DF /* LoginTextFieldView.swift in Sources */,
 				7B9AEDE42732B8E9009111DF /* StartButtonView.swift in Sources */,
 				7B9AEDFD2734047D009111DF /* ColorManager.swift in Sources */,
-				7B9AEE0127340DBE009111DF /* LoginObserver.swift in Sources */,
 				7B9AEDD427318626009111DF /* TimerAppApp.swift in Sources */,
 				7B64938627358336000A71C2 /* CharacterCounterView.swift in Sources */,
 				7B9AEDEA2732C01C009111DF /* InitialView.swift in Sources */,
